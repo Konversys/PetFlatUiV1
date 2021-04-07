@@ -25,7 +25,20 @@ namespace BinaryBunnyFlatUI.MVVM.ViewModel
         #region Команда HomeView
         private ICommand mHomeView;
         public ICommand HomeView => mHomeView ??= new RelayCommand(x => CurrentView = HomeVM);
-        #endregion 
+        #endregion
+        #endregion
+
+        #region Элемент IsBlackTheme
+        private bool mIsBlackTheme;
+        public bool IsBlackTheme
+        {
+            get => mIsBlackTheme;
+            set 
+            {
+                mIsBlackTheme = value;
+                OnPropertyChanged();
+            }
+        }
         #endregion
 
 
